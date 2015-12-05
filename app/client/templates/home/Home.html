@@ -1,0 +1,45 @@
+<template name="Home">
+  <div class="row mainheader">
+    <img class="headerimg" src="/images/tblogo.png">
+    <h1>WELCOME{{#if currentUser}}, <span id="name" style="text-transform: uppercase;"></span>
+      <script>document.getElementById("name").innerHTML = Meteor.user().profile.name;</script>
+      {{/if}}
+    </h1>
+    <p>
+      TO THE TEXTBOOK EXCHANGE WEBSITE.
+    </p>
+    <hr>
+    <a class="button1" href="{{ pathFor 'About' }}">ABOUT</a>
+    <a class="button1" href="{{ pathFor 'Help' }}">HELP</a>
+    <a class="button1" href="https://github.com/textbookmania/SkyBlue">GITHUB</a>
+  </div>
+
+  <div class="row" id="featuretitle">
+    <h1>FEATURES</h1>
+  </div>
+
+  <div class="row features">
+    <div class="col-md-4 feature" id="textbook">
+      <img class="featureimg" src="/images/buynew.png">
+      <h3>BUY</h3>
+      <p class="featuredsc">
+        Buy textbooks that you need for your ICS classes from fellow ICS students who have already taken the class.
+      </p>
+    </div>
+    <div class="col-md-4 feature" id="buybook">
+      <img class="featureimg" src="/images/sellnew.png">
+      <h3>SELL</h3>
+      <p>
+        Sell textbooks from previous ICS classes that you no longer need to fellow ICS students who need them.
+      </p>
+    </div>
+    <div class="col-md-4 feature" id="sellbook">
+      <img class="featureimg" src="/images/viewnew.png">
+      <h3>VIEW</h3>
+      <p>
+        View buying and selling offers made by fellow ICS students to see if you would like the make a deal with them.
+      </p>
+    </div>
+  </div>
+
+</template>

@@ -1,0 +1,17 @@
+<template name="IfLoggedIn">
+  {{#if authInProcess}}
+    <p>loading ...</p>
+  {{else}}
+    {{#if canShow}}
+      {{> UI.contentBlock }}
+    {{else}}
+  <div class="row mainheader">
+    <img class="headerimg" src="/images/tblogo.png">
+    <h1>You are not authorized to view this page.</h1>
+    <hr>
+    <h3>PLEASE LOG IN</h3>
+  </div>
+
+    {{/if}}
+  {{/if}}
+</template>

@@ -1,0 +1,307 @@
+body {
+  color: black;
+  background-color: white;
+  font-family: "Helvetica Neue", 'Helvetica' !important;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+.container-fluid {
+  padding: 0;
+
+}
+
+/** NAVBAR SETTINGS **/
+
+
+nav.navbar.navbar-inverse.navbar-fixed-top {
+  min-height: 73px !important;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: solid 5px #00AFDD;
+  -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
+  -moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.49);
+  box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.49);
+}
+
+.navbar-brand > img, .navbar-brand {
+  margin-top: 10px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white !important;
+  padding-bottom: 26px;
+  padding-top: 22px;
+}
+
+.mainheader {
+  padding-top: 110px;
+  border-radius: 0 !important;
+  background-image: url('/images/library1.png');
+  background-position: bottom;
+  background-size: cover;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+/************************/
+
+h1, h3 {
+  margin: 0;
+}
+
+h4 {
+  color: #00AFDD;
+  text-align: left;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.list {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-family: "Helvetica Neue", 'Helvetica';
+  font-size: 18px;
+}
+
+.box {
+  margin-left: 25px;
+  margin-bottom: 8px;
+}
+
+.titlespace {
+  letter-spacing: 8px;
+}
+
+.bumper {
+  margin-top: 90px !important;
+}
+
+.titlespace {
+  letter-spacing: 8px;
+}
+
+.fill {
+  height: 85px;
+}
+
+hr {
+  width: 100px;
+  border-color: black;
+  margin-top: 30px;
+}
+
+.headerimg {
+  width: 200px;
+  margin-bottom: 25px;
+}
+
+.tbheader {
+  margin-top: 70px;
+  background-color: #00AFDD;
+  background-size: cover;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: white;
+}
+
+.smalllogo {
+  width: 50px;
+  margin-top: -8px;
+}
+
+.house {
+  width: 60%;
+  background-color: white;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: auto !important;
+  margin-bottom: 15px !important;
+}
+
+.bookdesc {
+  font-weight: bold;
+  color: #00AFDD;
+}
+
+.button1, .button1:hover {
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+  border: solid black 1px;
+  border-radius: 5px;
+}
+
+.button2, .button2:hover {
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+  border: solid black 1px;
+  border-radius: 5px;
+}
+
+.well {
+ margin-left: 10px;
+ margin-right: 10px;
+}
+
+
+/****** FEATURES *********/
+
+#featuretitle {
+  padding-top: 10px;
+  text-align: center;
+  background-color: white;
+}
+
+.features {
+  background-color: white;
+  text-align: center;
+}
+
+.featureimg {
+  width: 125px;
+  margin: 20px 10px 20px 10px;
+}
+
+.featuredsc {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/** FOOTER SETTINGS **/
+
+footer {
+  background-color: black;
+}
+
+.text-muted {
+  color: white;
+  margin: 10px;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: #00AFDD;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  background-color: #00AFDD !important;
+}
+
+.emgit {
+  text-align: left;
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.devlink {
+  text-decoration: none;
+  color: black;
+}
+
+.devlink:hover  {
+  color: black;
+}
+
+.aboutdsc {
+  padding: 5px 40px 10px 40px;
+}
+
+.babybox {
+  background-color: white;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+div#header1 {
+  text-align: center;
+}
+
+ul > li {
+  color: #00AFDD;
+  padding: 0;
+  margin: 0;
+}
+
+div.img-div {
+  /* make it responsive */
+  max-width: 100%;
+  width: 30%;
+  height: 100%;
+  display:block;
+  /* div height to be the same as width*/
+  padding-top: 30%;
+
+  /* make it a cirkle */
+  border-radius: 50%;
+
+  /* Centering on image`s center*/
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+
+  /* it makes the clue thing, takes smaller dimention to fill div */
+  background-size: cover;
+
+  /* it is optional, for making this div centered in parent*/
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.studentleft {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.studentright {
+  border-top: solid 8px #00AFDD;
+  margin: 140px 0 0 0;
+}
+
+.fix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.row {
+  margin: 0;
+}
+
+.studentc {
+  background-color: white;
+  border: none;
+  box-shadow: none;
+}
+
+.box1 {
+  margin-top: 73px;
+  padding-bottom: 150px;
+}
+
+button.btn.btn-primary {
+  background-color: #00AFDD;
+  border: none;
+  color: white;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: transparent;
+}
+
+.anchor{
+  display: block;
+  height: 60px; /*same height as header*/
+  margin-top: -60px; /*same height as header*/
+  visibility: hidden;
+}

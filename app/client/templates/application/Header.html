@@ -1,0 +1,45 @@
+<template name="Header">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <!--  Display three horizontal lines when navbar collapsed. -->
+          <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{pathFor 'Home'}}">
+          <img align="top" style="margin-top: -17px;" class="smalllogo" src="/images/tblogo1.png">
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="{{#if isCurrentPage 'About'}}active{{/if}}"><a  href="{{ pathFor 'About' }}">ABOUT US</a></li>
+          <li class="{{#if isCurrentPage 'Help'}}active{{/if}}"><a href="{{ pathFor 'Help' }}">HELP</a></li>
+          {{#if currentUser}}
+          <li class="{{#if isCurrentPage 'ListTextBook'}}active{{/if}}"><a href="{{ pathFor 'ListTextBook' }}">TEXTBOOK
+          </a></li>
+          <li class="{{#if isCurrentPage 'BuyOffer'}}active{{/if}}"><a href="{{ pathFor 'BuyOffer' }}">BUY
+            OFFER</a></li>
+          <li class="{{#if isCurrentPage 'SellOffer'}}active{{/if}}"><a href="{{ pathFor 'SellOffer' }}">SELL
+            OFFER</a></li>
+          {{/if}}
+
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          {{#if isInRole 'admin'}}
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <span class="glyphicon glyphicon-wrench"></span> </a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ pathFor 'ListStudent' }}">VIEW STUDENTS</a></li>
+              <li><a href="{{ pathFor 'AddTextBook' }}">ADD TEXTBOOK</a></li>
+            </ul>
+          </li>
+          {{/if}}
+          {{> CasLogin }}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</template>
