@@ -1,8 +1,6 @@
 <template name="ListBuyOffer">
   {{#IfLoggedIn}}
-
-  <div class="well bumper">
-    <table class="table table-striped table-bordered">
+    <table class="table table-striped" style="background-color: white;">
       <thead>
       <tr>
        <!-- <th>Title</th> -->
@@ -10,6 +8,7 @@
         <th>Condition</th>
         <th>Offer</th>
         <th>Expiration</th>
+        <th>User</th>
       </tr>
       </thead>
 
@@ -21,11 +20,10 @@
         <td>{{condition}}</td>
         <td>{{offer}}</td>
         <td>{{expirationDate}}</td>
+        <td>{{studentID}}</td>
       </tr>
       {{/each}}
       </tbody>
     </table>
-
-  </div>
   {{/IfLoggedIn}}
 </template>
