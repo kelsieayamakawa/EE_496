@@ -1,5 +1,6 @@
 <template name="AddBuyOffer">
   {{#IfLoggedIn}}
+  <!--
     <div class="well bumper">
       {{> quickForm
       collection="BuyOffer"
@@ -12,5 +13,15 @@
       meteormethod="addBuyOffer"
       resetOnSuccess=true}}
     </div>
+    -->
+  <div class="well bumper">
+  {{#autoForm collection="BuyOffer" id="AddBuyOfferForm" type="method" meteormethod="addBuyOffer"}}
+    {{> afQuickFields book="book" offer="offer" condition="condition" }}
+    <div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-primary matches">Matches</button>
+    </div>
+  {{/autoForm}}
+  </div>
   {{/IfLoggedIn}}
 </template>

@@ -3,7 +3,6 @@
  * See: https://github.com/aldeed/meteor-autoform#callbackshooks
 */
 
-
 AutoForm.hooks({
   AddBuyOfferForm: {
     /**
@@ -16,3 +15,4 @@ AutoForm.hooks({
     }
   }
 });
+
