@@ -4,7 +4,6 @@
     <caption style="color: black; text-align: center; margin-bottom: 10px;">
       <h1 style="text-align: center; margin-bottom: 10px;">SELL OFFER</h1>
       <p>Create an offer to sell an ICS textbook at a given price or make an offer to buy a textbook from a student who is offering to sell it.</p>
-      <p>All offers are in US dollars.</p>
       <hr style="padding: 0; margin-top: 0; margin-bottom: 20px;">
       <a href="{{pathFor 'AddSellOffer'}}" class="button1">ADD</a>
     </caption>
@@ -24,7 +23,7 @@
     <tr>
       <td>{{book}}</td>
       <td>{{condition}}</td>
-      <td>{{offer}}</td>
+      <td>${{offer}}</td>
       <td>{{expirationDate}}</td>
       <td>{{studentID}}</td>
       <td><a href="#" class="button1" style="font-size: 10px;">BUY</a></td>

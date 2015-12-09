@@ -11,6 +11,7 @@
           <th>Expiration</th>
           <th></th>
           <th></th>
+          <th></th>
         </tr>
         </thead>
 
@@ -19,9 +20,9 @@
         <tr>
           <td>{{book}}</td>
           <td>{{condition}}</td>
-          <td>{{offer}}</td>
+          <td>${{offer}}</td>
           <td>{{expirationDate}}</td>
-          <td><a class="button2" style="font-size: 10px" href="{{pathFor 'EditBuyOffer'}}">EDIT</a></td>
+          <td><a class="button2" style="font-size: 10px" href="{{pathFor 'EditBuyOffer'}}">EDIT/RENEW</a></td>
           <td><a class="button2 deletebuy" style="font-size: 10px" href="#">DELETE</a></td>
         </tr>
         {{/each}}
@@ -40,6 +41,7 @@
           <th>Expiration</th>
           <th></th>
           <th></th>
+          <th></th>
         </tr>
         </thead>
 
@@ -48,9 +50,10 @@
         <tr>
           <td>{{book}}</td>
           <td>{{condition}}</td>
-          <td>{{offer}}</td>
+          <td>${{offer}}</td>
           <td>{{expirationDate}}</td>
-          <td><a class="button2" style="font-size: 10px" href="{{pathFor 'EditSellOffer'}}">EDIT</a></td>
+          <td><a class="button2" style="font-size: 10px" href="{{pathFor 'EditSellOffer'}}">EDIT/RENEW</a></td>
+          <td><a class="button2" style="font-size: 10px" href="#">RENEW</a></td>
           <td><a class="button2 deletesell" style="font-size: 10px" href="#">DELETE</a></td>
         </tr>
         {{/each}}
