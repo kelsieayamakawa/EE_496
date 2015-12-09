@@ -1,36 +1,38 @@
 <template name="ListBuyOfferMatches">
   {{#IfLoggedIn}}
 
-  <div class="well bumper">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="bumper">
+        <div class="matchbox">
+          <h1 style="text-align: center; padding-bottom: 20px;">List of Sell Matches</h1>
+          <a style="margin-bottom: 10px; font-size: 12px;" class="button1" href="{{ pathFor 'AddBuyOffer' }}">BACK</a>
+        </div>
+        <table class="table table-bordered" style="background-color: white; border-top: 5px solid #00AFDD;">
+          <thead>
+          <tr>
+            <th>Book</th>
+            <th>Condition</th>
+            <th>Offer</th>
+            <th>Expiration</th>
+          </tr>
+          </thead>
 
-    <h1>List of Sell Matches</h1>
-
-    <table class="table table-striped table-bordered">
-      <thead>
-      <tr>
-        <th>Book</th>
-        <th>Condition</th>
-        <th>Offer</th>
-        <th>Expiration</th>
-      </tr>
-      </thead>
-
-      <tbody>
-      {{#each buyOfferMatchList}}
-      <tr>
-        <td>{{book}}</td>
-        <td>{{condition}}</td>
-        <td>{{offer}}</td>
-        <td>{{expirationDate}}</td>
-      </tr>
-      {{/each}}
-      </tbody>
-    </table>
-
-    <a class="button1" href="{{ pathFor 'AddBuyOffer' }}">BACK</a>
-
+          <tbody>
+          {{#each buyOfferMatchList}}
+          <tr>
+            <td>{{book}}</td>
+            <td>{{condition}}</td>
+            <td>{{offer}}</td>
+            <td>{{expirationDate}}</td>
+          </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
   </div>
-
-
   {{/IfLoggedIn}}
 </template>
