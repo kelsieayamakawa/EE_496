@@ -14,8 +14,6 @@ Template.AddSellOffer.events({
   'click .matches1': function(e) {
     e.preventDefault();
 
-
-
     var BookName = AutoForm.getFieldValue('book', 'AddSellOfferForm');
     var currOffer = AutoForm.getFieldValue('offer', 'AddSellOfferForm');
     var currCond = AutoForm.getFieldValue('condition', 'AddSellOfferForm');
