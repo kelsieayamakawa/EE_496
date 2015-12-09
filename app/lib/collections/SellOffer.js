@@ -27,6 +27,10 @@ Meteor.methods({
   editSellOffer: function(doc, docID) {
     check(doc, SellOffer.simpleSchema());
     SellOffer.update({_id: docID}, doc);
+  },
+
+  deleteSellOffer: function(docID) {
+    SellOffer.remove({_id: docID});
   }
 });
 
