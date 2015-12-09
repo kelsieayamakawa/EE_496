@@ -21,6 +21,15 @@ Template.AddBuyOffer.events({
     if (currCond === "Don't Care") {
       BuyOfferMatchList =  SellOffer.find({book: BookName, offer: currOffer});
     }
+    else if (currOffer == null && currCond == null) {
+      BuyOfferMatchList =  SellOffer.find({book: BookName});
+    }
+    else if (currOffer == null) {
+      BuyOfferMatchList =  SellOffer.find({book: BookName, condition: currCond});
+    }
+    else if (currCond == null) {
+      BuyOfferMatchList =  SellOffer.find({book: BookName, offer: currOffer});
+    }
     else {
       BuyOfferMatchList =  SellOffer.find({book: BookName, offer: currOffer, condition: currCond});
     }
