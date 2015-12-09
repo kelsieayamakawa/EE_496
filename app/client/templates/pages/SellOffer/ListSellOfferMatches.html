@@ -1,4 +1,4 @@
-<template name="ListBuyOfferMatches">
+<template name="ListSellOfferMatches">
   {{#IfLoggedIn}}
 
   <div class="row">
@@ -6,8 +6,8 @@
     <div class="col-md-8">
       <div class="bumper">
         <div class="matchbox">
-          <h1 style="text-align: center; padding-bottom: 20px; color: #00AFDD">List of Sell Matches</h1>
-          <a style="margin-bottom: 10px; font-size: 12px;" class="button1" href="{{ pathFor 'AddBuyOffer' }}">BACK</a>
+          <h1 style="text-align: center; padding-bottom: 20px; color: #00AFDD">List of Buy Matches</h1>
+          <a style="margin-bottom: 10px; font-size: 12px;" class="button1" href="{{ pathFor 'AddSellOffer' }}">BACK</a>
         </div>
         <table class="table table-bordered" style="background-color: white; border-top: 5px solid #00AFDD;">
           <thead>
@@ -22,7 +22,7 @@
           </thead>
 
           <tbody>
-          {{#each buyOfferMatchList}}
+          {{#each sellOfferMatchList}}
           <tr>
             <td>{{book}}</td>
             <td>{{condition}}</td>
