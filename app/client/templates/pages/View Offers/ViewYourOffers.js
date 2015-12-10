@@ -30,6 +30,7 @@ Template.ViewYourOffers.helpers({
     }
     return newDate;
   }
+
 });
 
 Template.ViewYourOffers.events({

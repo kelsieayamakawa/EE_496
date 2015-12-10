@@ -49,7 +49,9 @@ if (Meteor.isServer) {
  * See: https://github.com/aldeed/meteor-autoform#affieldinput
  */
 
-
+SimpleSchema.messages({
+  "duplicate": "You have a duplicate offer in Sell Offer"
+});
 
 BuyOffer.attachSchema(new SimpleSchema({
   /*
@@ -80,7 +82,18 @@ BuyOffer.attachSchema(new SimpleSchema({
             value: value
           }
         })
-      }
+      },
+
+    },
+    custom: function(){
+      var bkk = this.valueOf('book').value;
+
+
+      var offer = SellOffer.find({studentID: Meteor.user().profile.name,book :bkk}).fetch();
+      if(offer === undefined || offer.length == 0);
+      else
+        return "duplicate";
+
     }
   },
   /*
