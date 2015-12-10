@@ -25,21 +25,22 @@ Template.AddBuyOffer.events({
     var BookName = AutoForm.getFieldValue('book', 'AddBuyOfferForm');
     var currOffer = AutoForm.getFieldValue('offer', 'AddBuyOfferForm');
     var currCond = AutoForm.getFieldValue('condition', 'AddBuyOfferForm');
+    var currDate = new Date();
 
     if (currCond === "Don't Care") {
-      BuyOfferMatchList =  SellOffer.find({book: BookName, offer: { $lte : currOffer} });
+      BuyOfferMatchList =  SellOffer.find({book: BookName, offer: { $lte : currOffer}, expirationDate: {$gt: currDate} });
     }
     else if (currOffer == null && currCond == null) {
-      BuyOfferMatchList =  SellOffer.find({book: BookName});
+      BuyOfferMatchList =  SellOffer.find({book: BookName, expirationDate: {$gt: currDate}});
     }
     else if (currOffer == null) {
-      BuyOfferMatchList =  SellOffer.find({book: BookName, condition: currCond});
+      BuyOfferMatchList =  SellOffer.find({book: BookName, condition: currCond, expirationDate: {$gt: currDate}});
     }
     else if (currCond == null) {
-      BuyOfferMatchList =  SellOffer.find({book: BookName, offer: { $lte : currOffer} });
+      BuyOfferMatchList =  SellOffer.find({book: BookName, offer: { $lte : currOffer}, expirationDate: {$gt: currDate} });
     }
     else {
-      BuyOfferMatchList =  SellOffer.find({book: BookName, offer: { $lte : currOffer}, condition: currCond});
+      BuyOfferMatchList =  SellOffer.find({book: BookName, offer: { $lte : currOffer}, condition: currCond, expirationDate: {$gt: currDate}});
     }
 
     Router.go('ListBuyOfferMatches');
