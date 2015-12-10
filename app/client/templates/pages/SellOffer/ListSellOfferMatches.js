@@ -40,7 +40,6 @@ Template.AddSellOffer.events({
     else {
       SellOfferMatchList =  BuyOffer.find({book: BookName, offer: { $gte : currOffer}, condition: currCond, expirationDate: {$gt: currDate}});
     }
-
     Router.go('ListSellOfferMatches');
   }
 });

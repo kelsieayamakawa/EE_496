@@ -13,10 +13,22 @@ Template.ViewYourOffers.helpers({
     return SellOffer.find({studentID: Meteor.user().profile.name})
   },
   formatDate: function (date) {
-    return moment(date).format('ll');
+    var currDate = new Date();
+    var newDate = moment(date).format('ll');
+    if (date <= currDate) {
+      newDate = newDate.fontcolor("red");
+      return newDate;
+    }
+    return newDate;
   },
   formatTime: function (date) {
-    return moment(date).format('h:mm a');
+    var currDate = new Date();
+    var newDate = moment(date).format('h:mm a');;
+    if (date <= currDate) {
+      newDate = newDate.fontcolor("red");
+      return newDate;
+    }
+    return newDate;
   }
 });
 
