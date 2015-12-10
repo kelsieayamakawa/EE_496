@@ -15,6 +15,19 @@ Meteor.methods({
    * @param doc The Offer document.
    */
   addSellOffer: function(doc) {
+    textList=Textbook.find().fetch();
+    doc.isbn = _.find(textList, function(record){
+      return record.isbn === doc.isbn;
+    }).isbn;
+    doc.owner = Meteor.user().profile.name;
+    //stop duplicate offers from same user
+    if (_.findWhere(BuyOffer.find().fetch(), {owner: doc.owner, isbn: doc.isbn}) || _.findWhere(SellOffer.find().fetch(), {owner: doc.owner, isbn: doc.isbn}) ) {
+      if (Meteor.isClient) {
+        alert("You already have a buy offer for that book.");
+      }
+      return;
+    }
+
     check(doc, SellOffer.simpleSchema());
     SellOffer.insert(doc);
   },
