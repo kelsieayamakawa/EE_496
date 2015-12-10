@@ -310,3 +310,7 @@ button.btn.btn-primary {
   text-align: center;
   margin-bottom: 20px;
 }
+
+legend.af-fieldGroup-heading {
+  visibility: hidden;
+}
