@@ -50,7 +50,7 @@ if (Meteor.isServer) {
  */
 
 SimpleSchema.messages({
-  "duplicate": "You have a duplicate offer in Sell Offer"
+  "duplicateBuy": "You already have the same offer in Sell Offer"
 });
 
 BuyOffer.attachSchema(new SimpleSchema({
@@ -92,7 +92,7 @@ BuyOffer.attachSchema(new SimpleSchema({
       var offer = SellOffer.find({studentID: Meteor.user().profile.name,book :bkk}).fetch();
       if(offer === undefined || offer.length == 0);
       else
-        return "duplicate";
+        return "duplicateBuy";
 
     }
   },
