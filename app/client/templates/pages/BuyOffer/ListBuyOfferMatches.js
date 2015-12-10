@@ -7,6 +7,12 @@ Template.ListBuyOfferMatches.helpers({
    */
   buyOfferMatchList: function () {
     return BuyOfferMatchList;
+  },
+  formatDate: function (date) {
+    return moment(date).format('ll');
+  },
+  formatTime: function (date) {
+    return moment(date).format('h:mm a');
   }
 });
 

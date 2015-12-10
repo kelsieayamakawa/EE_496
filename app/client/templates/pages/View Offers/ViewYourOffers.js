@@ -11,6 +11,12 @@ Template.ViewYourOffers.helpers({
 
   viewSellOffers: function () {
     return SellOffer.find({studentID: Meteor.user().profile.name})
+  },
+  formatDate: function (date) {
+    return moment(date).format('ll');
+  },
+  formatTime: function (date) {
+    return moment(date).format('h:mm a');
   }
 });
 
